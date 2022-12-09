@@ -318,9 +318,10 @@ img {
   gap: 10px;
 }
 .social-icon {
-  display: block;
   padding: 12px;
   border-radius: 50%;
+  font-size: 0px;
+  display: flex;
 }
 .social-icon:hover,
 .social-icon:focus {
@@ -329,7 +330,7 @@ img {
 }
 
 .team-social-icons {
-  margin-top: 6px;
+  margin-top: 16px;
   padding: 0 32px;
 }
 
