@@ -71,6 +71,46 @@ img {
   padding: 24px 0 25px;
 }
 
+.nav-links-active {
+  position: relative;
+  color: var(--blue);
+}
+
+.nav-links-active:after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  top: 44px;
+  background-color: var(--blue);
+}
+
+.nav-links-to-be-active {
+  position: relative;
+  color: var(--blue);
+}
+
+.nav-links-to-be-active:after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  top: 44px;
+  background-color: var(--blue);
+  visibility: hidden;
+  transition-property: visibility;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-links-to-be-active:hover:after {
+  visibility: visible;
+}
+
 .nav-links-item-1 {
   text-decoration: none;
   color: var(--dark-gray);
@@ -87,22 +127,6 @@ img {
   color: var(--blue);
 }
 
-.nav-links-active {
-  position: relative;
-  color: var(--blue);
-}
-
-.nav-links-active::after {
-  position: absolute;
-  display: block;
-  content: '';
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  top: 45px;
-  background-color: var(--blue);
-}
-
 .nav-links-item-2 {
   color: var(--silver);
   fill: var(--silver);
@@ -113,7 +137,7 @@ img {
   display: flex;
   gap: 10px;
   align-items: center;
-  transition-property: color fill;
+  transition-property: color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -363,7 +387,7 @@ img {
   border-radius: 50%;
   font-size: 0px;
   display: flex;
-  transition-property: background-color color;
+  transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -404,7 +428,7 @@ img {
   border: 1px solid var(--social);
   border-radius: 4px;
   fill: var(--social);
-  transition-property: color fill border border-radius;
+  transition-property: color, fill, border, border-radius;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -461,7 +485,7 @@ img {
   border: none;
   padding: 6px 22px;
   margin-bottom: 50px;
-  transition-property: color background-color box-shadow border-radius;
+  transition-property: color, background-color, box-shadow, border-radius;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -546,8 +570,9 @@ img {
   height: 101%;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
+  transition-property: transform;
   transition-duration: 250ms;
-  transition-timing-function: linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-net-list li:hover .portfolio-figure-description {
@@ -566,6 +591,9 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition-property: visibility, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
 }
 
 .backdrop {
@@ -589,8 +617,8 @@ img {
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition-property: transform;
-  transition-duration: 1000ms;
-  transition-timing-function: linear;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
 }
 
 .backdrop.is-hidden .modal {
