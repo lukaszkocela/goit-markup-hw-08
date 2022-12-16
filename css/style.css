@@ -74,6 +74,10 @@ img {
 .nav-links-active {
   position: relative;
   color: var(--blue);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .nav-links-active:after {
