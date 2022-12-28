@@ -805,18 +805,15 @@ img {
 .modal-check {
   display: inline-flex;
   margin-left: 55px;
-  appearance: none;
+  opacity: 0;
 }
 
 .modal-to-check {
   fill: var(--black);
   position: absolute;
-  left: 53px;
-  top: 438px;
+  left: 54px;
+  top: 439px;
   opacity: 1;
-  transition-property: opacity;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-after-check {
@@ -826,12 +823,9 @@ img {
   border-radius: 2px;
   outline: var(--blue);
   position: absolute;
-  left: 53px;
-  top: 438px;
+  left: 54px;
+  top: 439px;
   opacity: 0;
-  transition-property: opacity;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-check:checked + .modal-to-check {
@@ -843,7 +837,7 @@ img {
 }
 
 .modal-checkbox {
-  margin-left: 18px;
+  margin-left: 8px;
 }
 
 .modal-link {
