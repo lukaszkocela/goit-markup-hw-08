@@ -497,7 +497,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
 }
 
 .footer-newsletter-suggestion {
@@ -523,14 +522,10 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-newsletter-suggestion:hover,
-.footer-newsletter-suggestion:focus {
-  border: 1px solid var(--blue);
-}
-
 .submit-button {
   width: 200px;
   height: 50px;
+  margin-left: 12px;
   background-color: var(--blue);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -717,6 +712,7 @@ img {
 .modal-text {
   font-weight: 700;
   font-size: 20px;
+  line-height: 1.17;
   margin-top: 40px;
   margin-bottom: 12px;
   text-align: center;
@@ -725,50 +721,52 @@ img {
 
 .modal-label {
   display: block;
-  position: relative;
   font-size: 12px;
-  margin: 10px 40px;
+  margin-left: 40px;
   color: var(--silver);
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.modal-input-positioning {
+  display: block;
+  position: relative;
+  margin-top: 4px;
+  margin-bottom: 10px;
 }
 
 .modal-icon {
   position: absolute;
-  top: 29px;
-  left: 13px;
-}
-
-.modal-label .modal-icon {
+  top: 14px;
+  left: 53px;
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-label:hover .modal-icon {
-  fill: var(--blue);
-}
-
-.modal-label:focus-within .modal-icon {
-  fill: var(--blue);
-}
-
 .modal-input {
   display: block;
-  width: 100%;
+  width: 448px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  margin-left: 40px;
   margin-top: 4px;
-  padding-left: 40px;
-  color: var(--silver);
+  padding: 12px 42px;
+  color: var(--black);
   outline: none;
   transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:hover,
-.modal-input:focus {
+input:is(:hover, :focus) {
   border: 1px solid var(--blue);
+}
+
+input:is(:hover, :focus) + svg {
+  fill: var(--blue);
 }
 
 .modal-textarea {
@@ -778,21 +776,13 @@ img {
   font-size: 12px;
   color: rgba(117, 117, 117, 0.5);
   margin-bottom: 20px;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-button {
-  width: 200px;
-  height: 50px;
-  margin: 30px 164px 40px;
-  background-color: var(--blue);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  color: var(--white);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 2;
-  border: none;
-  cursor: pointer;
+textarea:is(:hover, :focus) {
+  border: 1px solid var(--blue);
 }
 
 .modal-label-check {
@@ -812,7 +802,7 @@ img {
   fill: var(--black);
   position: absolute;
   left: 54px;
-  top: 439px;
+  top: 441px;
   opacity: 1;
 }
 
@@ -824,7 +814,7 @@ img {
   outline: var(--blue);
   position: absolute;
   left: 54px;
-  top: 439px;
+  top: 441px;
   opacity: 0;
 }
 
@@ -842,4 +832,19 @@ img {
 
 .modal-link {
   color: var(--blue);
+}
+
+.modal-button {
+  width: 200px;
+  height: 50px;
+  margin: 30px 164px 40px;
+  background-color: var(--blue);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 2;
+  border: none;
+  cursor: pointer;
 }
