@@ -514,6 +514,10 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.footer-newsletter-suggestion:focus {
+  border: 1px solid var(--blue);
+}
+
 .footer-newsletter-suggestion::placeholder {
   font-weight: 400;
   font-size: 16px;
@@ -761,11 +765,12 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-input:is(:hover, :focus) {
+.modal-input:focus {
   border: 1px solid var(--blue);
 }
 
-input:is(:hover, :focus) + svg {
+.modal-input:hover + svg,
+.modal-input:focus + svg {
   fill: var(--blue);
 }
 
@@ -781,7 +786,7 @@ input:is(:hover, :focus) + svg {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-textarea:is(:hover, :focus) {
+textarea:is:focus {
   border: 1px solid var(--blue);
 }
 
