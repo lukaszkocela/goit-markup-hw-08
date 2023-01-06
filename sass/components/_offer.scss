@@ -1,0 +1,29 @@
+.offer {
+  margin-top: -94px;
+  &__title {
+    color: $secondaryColorDark;
+    font-size: 36px;
+    letter-spacing: 0.03em;
+    display: flex;
+    list-style: none;
+    margin-bottom: 50px;
+    margin-left: 409px;
+    text-align: center;
+  }
+  &__list {
+    gap: 30px;
+    display: flex;
+    position: relative;
+  }
+  &__description {
+    background-color: rgba(47, 48, 58, 0.8);
+    color: $tertiaryColorWhite;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    padding: 27px 0;
+    width: 370px;
+    position: absolute;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,48 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 93px;
+  &__menu {
+    display: flex;
+    gap: 46px;
+  }
+  &__item {
+    position: relative;
+    color: $primaryColor;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    font-size: 14px;
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      top: 44px;
+      background-color: $primaryColor;
+    }
+  &--changing {
+    color: $secondaryColorDark;
+    transition-property: color;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+  &:hover,
+  &:focus {
+    color: $primaryColor;
+    &::after {
+      visibility: visible;
+      color: $primaryColor;
+    }
+  }
+  &::after {
+    visibility: hidden;
+    transition-property: visibility;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+  }
+}
+  }
+}

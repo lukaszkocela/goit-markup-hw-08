@@ -1,0 +1,31 @@
+.clients {
+  color: $secondaryColorDark;
+  font-size: 36px;
+  letter-spacing: 0.03em;
+  display: flex;
+  list-style: none;
+  margin-bottom: 50px;
+  margin-left: 486px;
+  text-align: center;
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  &__item {
+    padding: 16px 32px;
+    border: 1px solid $secondaryColorSocial;
+    border-radius: $borderRadiusDefault;
+    fill: $secondaryColorSocial;
+    transition-property: color, fill, border, border-radius;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+    &:hover,
+    &:focus {
+      border: 1px solid $primaryColor;
+      border-radius: $borderRadiusDefault;
+      fill: $primaryColor;
+      cursor: pointer;
+    }
+  }
+}

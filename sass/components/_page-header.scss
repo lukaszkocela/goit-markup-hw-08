@@ -1,0 +1,9 @@
+.page-header {
+  border: 1px solid #ececec;
+  padding: 24px 0 25px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

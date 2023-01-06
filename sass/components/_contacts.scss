@@ -1,0 +1,23 @@
+.contacts {
+  display: flex;
+  gap: 30px;
+  &__item {
+    color: $secondaryColorSilver;
+    fill: $secondaryColorSilver;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    transition-property: color, fill;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+    &:hover,
+    &:focus {
+      color: $primaryColor;
+      fill: $primaryColor;
+    }
+  }
+}

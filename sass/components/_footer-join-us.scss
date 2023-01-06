@@ -1,0 +1,11 @@
+.footer-join-us {
+  padding-top: 72px;
+  padding-left: 70px;
+  &__text {
+    color: $tertiaryColorWhite;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    line-height: 1.17;
+  }
+}
