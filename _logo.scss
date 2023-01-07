@@ -1,0 +1,16 @@
+.logo {
+  font-family: $secondaryFont;
+  color: $primaryColor;
+  text-decoration: none;
+  font-size: 26px;
+  letter-spacing: 0.03em;
+  line-height: 1.17;
+  &__studio {
+  &--black {
+    color: $secondaryColorBlack;
+  }
+  &--white {
+    color: $tertiaryColorWhite;
+  }
+}
+}

@@ -24,7 +24,7 @@
     <header class="page-header">
       <div class="container page-header__container">
         <div class="navigation">
-          <a href="index.html" class="logo">Web<span class="logo--header">Studio</span></a>
+          <a href="index.html" class="logo">Web<span class="logo__studio--black">Studio</span></a>
           <nav>
             <ul class="navigation__menu">
               <li><a href="index.html" class="navigation__item">Agencja</a></li>
@@ -368,7 +368,7 @@
     <footer class="page-footer">
       <div class="container page-footer__container">
         <div class="footer-address">
-          <a href="index.html" class="logo">Web<span class="logo--footer">Studio</span></a>
+          <a href="index.html" class="logo">Web<span class="logo__studio--white">Studio</span></a>
           <address>
             <ul class="footer-address__position">
               <li>
@@ -465,10 +465,9 @@
               class="modal__label-input"
               required
               minlength="9"
-              maxlength="12"
-            /><svg width="13" height="13" class="modal__label-icon">
-              <use href="images/icons.svg#icon-modal-phone"></use>
-            </svg>
+              maxlength="12" />
+              <svg width="13" height="13" class="modal__label-icon">
+              <use href="images/icons.svg#icon-modal-phone"></use></svg>
           </div>
           <label class="modal__label" for="order-email">E-mail</label>
           <div class="modal__label-positioning">
@@ -477,37 +476,34 @@
               name="order-email"
               id="order-email"
               class="modal__label-input"
-              required
-            /><svg width="15" height="12" class="modal__label-icon">
+              required/>
+              <svg width="15" height="12" class="modal__label-icon">
               <use href="images/icons.svg#icon-modal-email" class="modal-icon"></use>
             </svg>
           </div>
-          <label class="modal__label" for="order-comment">Komentarz</label
-          ><textarea
+          <label class="modal__label" for="order-comment">Komentarz</label>
+          <textarea
             name="order-comment"
             id="order-comment"
             placeholder="Wprowadź tekst"
-            class="modal__label-input modal__label-textarea"
-          ></textarea
-          ><label class="modal__checkbox" for="order-accept"
-            ><input
+            class="modal__label-input modal__label-textarea"></textarea>
+            <label class="modal__checkbox" for="order-accept">
+              <input
               type="checkbox"
               name="order-accept"
               id="order-accept"
               class="modal__checkbox-hide"
               value="accept"
-              required
-            />
+              required/>
             <svg width="16" height="15" class="modal__checkbox-to-check">
               <use href="images/icons.svg#icon-modal-to-check"></use>
             </svg>
             <svg width="16" height="15" class="modal__checkbox-after-check">
-              <use href="images/icons.svg#icon-modal-checked"></use></svg
-            ><span class="modal__checkbox-text">
+              <use href="images/icons.svg#icon-modal-checked"></use></svg>
+              <span class="modal__checkbox-text">
               Oświadczam, iż akceptuję <a href="#" class="modal__checkbox-item"> Regulamin </a> i
-              <a href="#" class="modal__checkbox-item"> Politykę Prywatności</a></span
-            ></label
-          >
+              <a href="#" class="modal__checkbox-item"> Politykę Prywatności</a></span>
+            </label>
           <button type="submit" class="modal__button">Wyślij</button>
         </form>
       </div>
