@@ -1,4 +1,6 @@
 .contacts {
+  display: none;
+  @include tablet {
   display: flex;
   gap: 30px;
   &__item {
@@ -20,4 +22,5 @@
       fill: $primaryColor;
     }
   }
+}
 }

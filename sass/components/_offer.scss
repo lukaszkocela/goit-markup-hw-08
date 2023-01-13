@@ -1,4 +1,7 @@
 .offer {
+  display: none;
+  @include desktop {
+    display: block;
   margin-top: -94px;
   &__title {
     color: $secondaryColorDark;
@@ -26,4 +29,5 @@
     position: absolute;
     bottom: 0;
   }
+}
 }

@@ -1,11 +1,26 @@
 .advantages {
+  padding: 0 15px;
+  @include desktop {
+    padding: 0;
+  }
   gap: 30px;
   display: flex;
+  flex-direction: column;
+  @include desktop {
+    flex-direction: row;
+  }
+  flex-wrap: nowrap;
   &__box {
     background-color: $tertiaryColorPortfolio;
     border: $tertiaryColorPortfolio solid;
     border-radius: $borderRadiusDefault;
-    padding: 25px 101px;
+    padding: 25px 190px;
+    @include tablet {
+      padding: 25px 142px;
+    }
+    @include desktop {
+      padding: 25px 101px;
+    }
   }
   &__header {
     color: $secondaryColorDark;
@@ -13,12 +28,16 @@
     letter-spacing: 0.03em;
     font-weight: 700;
     padding-top: 30px;
+    text-align: center;
+    @include desktop {
+      text-align: start;
+    }
   }
   &__text {
     padding: 10px 0 0;
     color: $secondaryColorSilver;
     font-size: 14px;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
     line-height: 1.71;
   }
 }

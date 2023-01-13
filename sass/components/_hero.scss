@@ -1,20 +1,32 @@
 .hero {
   background-color: $secondaryColorLight;
   color: $tertiaryColorWhite;
-  background-image: url('../images/photo-hero.jpg'),
-    linear-gradient(to bottom, $secondaryColorLight 40%, $secondaryColorLight);
+  background-image: url('../images/photo-hero-mob.jpg'),
+  linear-gradient(to bottom, $secondaryColorLight 40%, $secondaryColorLight);
+ @include desktop { background-image: url('../images/photo-hero.jpg'),
+    linear-gradient(to bottom, $secondaryColorLight 40%, $secondaryColorLight);}
   background-position: center;
-  background-size: 1600px;
   background-repeat: no-repeat;
   &__header {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
-    margin: 106px 237px 30px;
+    padding: 58px 42px 30px;
+    @include tablet {
+      padding: 58px 202px 30px
+    }
+    @include desktop {
+      padding: 106px 237px 30px;
+    }
+    font-size: 26px;
+    line-height: 1.62;
+    @include desktop {
+      font-size: 44px;
+    line-height: 1.36;
+    }
   }
-  &__button {
+  
+    &__button {
     background-color: $primaryColor;
     color: $tertiaryColorWhite;
     font-size: 16px;
@@ -26,8 +38,16 @@
     border-radius: $borderRadiusDefault;
     line-height: 1.86;
     padding: 10px 42px;
-    margin-left: 500px;
+    margin-left: 125px;
+    @include tablet {
+      margin-left: 284px;
+    }
+    @include desktop{
+      margin-left: 500px;
+    }
+    margin-bottom: 58px;
+    @include desktop {
     margin-bottom: 106px;
-    padding: 10px 42px;
   }
+}
 }

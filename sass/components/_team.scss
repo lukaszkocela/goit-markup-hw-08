@@ -1,14 +1,28 @@
 .team {
+  padding: 60 15px;
+  @include desktop {
+    padding: 0;
+  }
   background-color: $tertiaryColorSmoke;
   &__title {
     color: $secondaryColorDark;
-    font-size: 36px;
     letter-spacing: 0.03em;
+    font-size: 28px;
+    margin-left: 158px;
+    margin-bottom: 30px;
+    @include desktop {
+      font-size: 36px;
     margin-left: 480px;
     margin-bottom: 50px;
+    }
   }
   &__list {
     display: flex;
+    flex-direction: column;
+    @include desktop {
+      flex-direction: row;
+    }
+    flex-wrap: nowrap;
     gap: 30px;
   }
   &__member {

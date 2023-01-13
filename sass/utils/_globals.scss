@@ -9,7 +9,9 @@ li {
 }
 
 img {
-  vertical-align: middle;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -18,11 +20,18 @@ body {
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+  @media screen and (min-width:1200px) {
+    padding: 94px 0;
+  }
 }
 
 .container {
-  width: 1200px;
-  padding: 0 15px;
+  max-width: 1200px;
+  min-width: 320px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 15px;
 }
+
+

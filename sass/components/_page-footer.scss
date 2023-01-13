@@ -1,7 +1,13 @@
 .page-footer {
   background-color: $secondaryColorLight;
-  padding: 0 200px;
+  padding: 0;
+  @include desktop {
+  padding: 0 200px;}
   &__container {
     display: flex;
+  flex-direction: column;
+  @include desktop {
+    flex-direction: row;
   }
+}
 }
