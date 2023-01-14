@@ -1,9 +1,14 @@
 .page-header {
   border: 1px solid #ececec;
-  padding: 24px 0 25px;
+  padding: 16px 0;
+  @include desktop {
+  padding: 24px 0 25px;}
   &__container {
+    display: block;
+    @include desktop {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+}
 }

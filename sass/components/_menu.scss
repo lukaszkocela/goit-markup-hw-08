@@ -1,0 +1,126 @@
+
+.menu {
+  position: fixed;
+  display: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 40px;
+  background-color: $tertiaryColorWhite;
+  transform: translateX(100%);
+  transition-property: transform;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+  &__button {
+    align-items: flex-end;
+    fill: currentColor;
+    transition-property: fill;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+  }
+
+  &__toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color:$secondaryColorBlack;
+    transition-property: color;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+    &:hover {
+      color: $primaryColor;
+    }
+    display: block;
+    @include tablet {
+        display: none;
+    }
+  }
+
+  & &__toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  &__close {
+    fill: currentColor;
+  display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__link {
+    color: $secondaryColorDark;
+    letter-spacing: 0.02em;
+    font-size: 40px;
+    line-height: 1.175;
+    transition-property: color;
+    text-decoration: none;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+    &:hover,
+    &:focus {
+      color: $primaryColor;
+    }
+}
+
+    &__phone {
+      color: $primaryColor;
+      text-decoration: none;
+      font-size: 34px;
+      max-width: 100vw;
+      margin-bottom: 32px;
+    }
+
+
+  &__social {
+    * {
+      border-right: 1px solid #21212133;
+      margin-right: 10px;
+      display: inline-block;
+    }
+    &__link {
+      color: $primaryColor;
+      letter-spacing: 0.02em;
+      font-size: 18px;
+      line-height: 1.22;
+      text-decoration: none;
+    }
+    :last-child {
+      border: none;
+      margin: none;
+      padding: none;
+    }
+  }
+
+  &__email {
+    font-size: 24px;
+    color: $secondaryColorSilver;
+    letter-spacing: 0.02em;
+    line-height: 1.16;
+    text-decoration: none;
+  }
+
+  &__container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &.is-open {
+    transition-property: transform;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+    transform: translateX(0);
+    opacity: 1;
+    display: block;
+  }
+}

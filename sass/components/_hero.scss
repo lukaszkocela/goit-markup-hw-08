@@ -1,32 +1,48 @@
 .hero {
   background-color: $secondaryColorLight;
   color: $tertiaryColorWhite;
-  background-image: url('../images/photo-hero-mob.jpg'),
-  linear-gradient(to bottom, $secondaryColorLight 40%, $secondaryColorLight);
- @include desktop { background-image: url('../images/photo-hero.jpg'),
-    linear-gradient(to bottom, $secondaryColorLight 40%, $secondaryColorLight);}
+  background-image: url('../images/photo-hero-mobile@1.jpg'),
+    linear-gradient(to bottom, $secondaryColorLight 40%, $secondaryColorLight);
+    background-repeat: no-repeat;
+    height: 400px;
+    background-size: 480px;
+    background-position: center;
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(to bottom, $secondaryColorLight 40%, $secondaryColorLight),
+        url('../images/photo-hero-mobile@2x.jpg'); } }
+    @include desktop {
+  background-image: url('../images/photo-hero@1.jpg'),
+    linear-gradient(to bottom, $secondaryColorLight 40%, $secondaryColorLight);
+  background-size: 1600px;
+  height: 600px;
   background-position: center;
-  background-repeat: no-repeat;
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to bottom, $secondaryColorLight 40%, $secondaryColorLight),
+      url('../images/photo-hero@2x.jpg');
+  }
+}
+    }
   &__header {
+    display: block;
     font-weight: 900;
     text-align: center;
     letter-spacing: 0.06em;
-    padding: 58px 42px 30px;
-    @include tablet {
-      padding: 58px 202px 30px
-    }
-    @include desktop {
-      padding: 106px 237px 30px;
-    }
+    margin: 58px 2px 30px;
     font-size: 26px;
-    line-height: 1.62;
+    line-height: 1.61;
     @include desktop {
+      margin: 106px 237px 30px;
       font-size: 44px;
-    line-height: 1.36;
+      line-height: 1.36;
     }
   }
-  
-    &__button {
+  &__button {
     background-color: $primaryColor;
     color: $tertiaryColorWhite;
     font-size: 16px;
@@ -39,14 +55,9 @@
     line-height: 1.86;
     padding: 10px 42px;
     margin-left: 125px;
-    @include tablet {
-      margin-left: 284px;
-    }
-    @include desktop{
-      margin-left: 500px;
-    }
     margin-bottom: 58px;
     @include desktop {
+    margin-left: 500px;
     margin-bottom: 106px;
   }
 }

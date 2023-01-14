@@ -20,8 +20,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
+  width: calc(100vw - 30px);
+  max-width: 450px;
+  @include desktop {
+    max-width: 528px;
+  }
+  min-height: 581px;
   background-color: $tertiaryColorWhite;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -47,6 +51,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    fill: currentColor;
+    transition-property: fill;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+    &:hover,
+    :focus {
+      fill: $primaryColor;
+      @include desktop {
+        fill: currentColor;
+      }
+    }
   }
   &__text {
     font-weight: 700;
@@ -82,7 +97,11 @@
   }
   &__label-input {
     display: block;
-    width: 448px;
+    width: calc(100vw - 30px);
+    max-width: 370px;
+    @include desktop {
+      max-width: 448px;
+    }
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -117,15 +136,22 @@
     }
   }
   &__checkbox {
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.16;
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.71;
+    }
     color: $secondaryColorSilver;
     letter-spacing: 0.03em;
   }
   &__checkbox-to-check {
     fill: $secondaryColorBlack;
     position: absolute;
-    left: 54px;
+    left: 42px;
+    @include desktop {
+      left: 54px;
+    }
     top: 441px;
     opacity: 1;
   }
@@ -136,7 +162,10 @@
     border-radius: 2px;
     outline: $primaryColor;
     position: absolute;
-    left: 54px;
+    left: 42px;
+    @include desktop {
+      left: 54px;
+    }
     top: 441px;
     opacity: 0;
   }
@@ -152,7 +181,10 @@
     }
   }
   &__checkbox-text {
-    margin-left: 8px;
+    margin-left: -5px;
+    @include desktop {
+      margin-left: 8px;
+    }
   }
   &__checkbox-item {
     color: $primaryColor;
@@ -160,7 +192,10 @@
   &__button {
     width: 200px;
     height: 50px;
-    margin: 30px 164px 40px;
+    margin: 30px 125px 40px;
+    @include desktop {
+      margin: 30px 164px 40px;
+    }
     background-color: $primaryColor;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;

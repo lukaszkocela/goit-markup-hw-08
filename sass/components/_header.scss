@@ -1,6 +1,9 @@
 .header {
   border: 1px solid #ececec;
-  padding: 24px 0 25px;
+  padding: 16px 0;
+  @include desktop {
+  padding: 24px 0 25px; 
+}
   &__container {
     display: flex;
     justify-content: space-between;
@@ -10,15 +13,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 93px;}
+    gap: 93px;
+  }
   &__menu {
+    display: none; 
+    @include desktop {
       display: flex;
       gap: 46px;
     }
+    }
+
   &__item {
-    display: none;
-    @include tablet {
-      display: block;
       position: relative;
       color: $primaryColor;
       text-decoration: none;
@@ -57,4 +62,3 @@
   }
     }
   }
-}

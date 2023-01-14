@@ -1,8 +1,5 @@
+
 .team {
-  padding: 60 15px;
-  @include desktop {
-    padding: 0;
-  }
   background-color: $tertiaryColorSmoke;
   &__title {
     color: $secondaryColorDark;

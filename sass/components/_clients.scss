@@ -1,8 +1,4 @@
 .clients {
-  padding: 0 15px;
-  @include desktop {
-    padding: 0;
-  }
   color: $secondaryColorDark;
   letter-spacing: 0.03em;
   display: flex;
