@@ -13,6 +13,17 @@
     .hero {
       background-image: linear-gradient(to bottom, $secondaryColorLight 40%, $secondaryColorLight),
         url('../images/photo-hero-mobile@2x.jpg'); } }
+        @include tablet {
+          background-image: url('../images/photo-hero-tablet@1.jpg'),
+    linear-gradient(to bottom, $secondaryColorLight 40%, $secondaryColorLight);
+    background-size: 768px;
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(to bottom, $secondaryColorLight 40%, $secondaryColorLight),
+        url('../images/photo-hero-tablet@2x.jpg'); } }
+        }
     @include desktop {
   background-image: url('../images/photo-hero@1.jpg'),
     linear-gradient(to bottom, $secondaryColorLight 40%, $secondaryColorLight);

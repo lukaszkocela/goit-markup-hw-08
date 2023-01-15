@@ -16,10 +16,16 @@
   &__list {
     display: flex;
     flex-direction: column;
-    @include desktop {
+    @include tablet {
       flex-direction: row;
     }
     flex-wrap: nowrap;
+    @include tablet {
+      flex-wrap: wrap;
+    }
+    @include desktop {
+      flex-wrap: nowrap;
+    }
     gap: 30px;
   }
   &__member {

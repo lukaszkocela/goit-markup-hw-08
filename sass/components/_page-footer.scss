@@ -6,8 +6,13 @@
   &__container {
     display: flex;
   flex-direction: column;
-  @include desktop {
-    flex-direction: row;
-  }
+  flex-wrap: wrap;
+@include tablet {
+  flex-direction: row;
+  flex-wrap: wrap;
 }
+  @include desktop {
+    flex-wrap: nowrap;
+  }
+  }
 }

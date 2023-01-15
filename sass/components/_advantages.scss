@@ -2,8 +2,14 @@
   gap: 30px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+@include tablet {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
   @include desktop {
-    flex-direction: row;
+    flex-wrap: nowrap;
   }
   &__box {
     background-color: $tertiaryColorPortfolio;
@@ -12,6 +18,13 @@
     padding: 25px 0;
     display: flex;
     justify-content: center;
+    max-width: 450px;
+    @include tablet {
+      max-width:354px;
+    }
+    @include desktop {
+      max-width: 270px;
+    }
   }
   &__header {
     color: $secondaryColorDark;
@@ -19,6 +32,13 @@
     letter-spacing: 0.03em;
     font-weight: 700;
     padding-top: 30px;
+    max-width: 450px;
+    @include tablet {
+      max-width:354px;
+    }
+    @include desktop {
+      max-width: 270px;
+    }
   }
   &__text {
     padding: 10px 0 0;
@@ -26,5 +46,12 @@
     font-size: 14px;
     letter-spacing: 0.03em;
     line-height: 1.71;
+    max-width: 450px;
+    @include tablet {
+      max-width:354px;
+    }
+    @include desktop {
+      max-width: 270px;
+    }
   }
 }

@@ -3,9 +3,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include tablet {
+    padding-left: 100px;
+  }
   @include desktop {
     align-items: flex-start;
-      padding-right: 72px;
+      padding-left: 0;
+      margin-right: 78px;
     }
   &__position {
     margin: 0;
@@ -17,9 +21,6 @@
     @include desktop {
       align-items:flex-start;
     }
-    & :nth-child(n + 2) {
-      padding-top: 9px;
-    }
     & :first-child {
       padding-top: 20px;
     }
@@ -28,7 +29,9 @@
     }
   }
   &__details {
-    font-size: 10px;
+    font-size: 14px;
+    @include desktop {
+      font-size: 12px;}
     line-height: 1.71;
     color: $tertiaryColorWhite;
     padding: 0;
@@ -39,7 +42,9 @@
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
     letter-spacing: 0.03em;
-    font-size: 10px;
+    font-size: 14x;
+    @include desktop {
+    font-size: 12x;}
     line-height: 1.71;
     font-style: normal;
     transition-property: color;

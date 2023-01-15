@@ -1,8 +1,13 @@
 .contacts {
   display: none;
-  @include desktop {
+  @include tablet {
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  gap: 10px; }
+  @include desktop {
+    flex-direction: row;
+    gap: 30px;
+  }
   &__item {
     color: $secondaryColorSilver;
     fill: $secondaryColorSilver;
@@ -22,5 +27,4 @@
       fill: $primaryColor;
     }
   }
-}
 }
