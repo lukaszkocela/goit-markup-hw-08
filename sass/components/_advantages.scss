@@ -9,10 +9,9 @@
     background-color: $tertiaryColorPortfolio;
     border: $tertiaryColorPortfolio solid;
     border-radius: $borderRadiusDefault;
-    padding: 25px 190px;
-    @include desktop {
-      padding: 25px 100px;
-    }
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
   }
   &__header {
     color: $secondaryColorDark;

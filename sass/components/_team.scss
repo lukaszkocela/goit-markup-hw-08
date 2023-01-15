@@ -5,11 +5,11 @@
     color: $secondaryColorDark;
     letter-spacing: 0.03em;
     font-size: 28px;
-    margin-left: 158px;
+    display: flex;
+    justify-content: center;
     margin-bottom: 30px;
     @include desktop {
       font-size: 36px;
-    margin-left: 480px;
     margin-bottom: 50px;
     }
   }
