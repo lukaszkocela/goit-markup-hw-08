@@ -29,9 +29,13 @@
   &__showcase-description {
     color: $tertiaryColorWhite;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.5;
     letter-spacing: 0.03em;
-    margin: 49px 35px 24px;
+    margin: 77px 24px;
+    @include tablet {
+      margin: 49px 24px;}
+      @include desktop {
+    margin: 49px 40px 24px;}
   }
   &__layout {
     display: flex;
@@ -47,6 +51,8 @@
     line-height: 2;
     letter-spacing: 0.06em;
     font-weight: 700;
+    display: flex;
+    justify-content: center;
   }
   &__description {
     color: $secondaryColorSilver;
