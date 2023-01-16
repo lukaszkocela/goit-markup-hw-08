@@ -18,6 +18,7 @@
 
 .modal {
   position: absolute;
+  text-align: center;
   top: 50%;
   left: 50%;
   width: calc(100vw - 30px);
@@ -74,6 +75,7 @@
   }
   &__label {
     display: block;
+    text-align: start;
     font-size: 12px;
     margin-left: 40px;
     color: $secondaryColorSilver;
@@ -97,7 +99,8 @@
   }
   &__label-input {
     display: block;
-    width: calc(100vw - 30px);
+    align-items: center;
+    width: calc(100vw - 110px);
     max-width: 370px;
     @include desktop {
       max-width: 448px;
@@ -148,11 +151,12 @@
   &__checkbox-to-check {
     fill: $secondaryColorBlack;
     position: absolute;
-    left: 42px;
+    left: 40px;
+    top: 440px;
     @include desktop {
-      left: 54px;
+      left: 55px;
+      top: 442px;
     }
-    top: 441px;
     opacity: 1;
   }
   &__checkbox-after-check {
@@ -162,11 +166,12 @@
     border-radius: 2px;
     outline: $primaryColor;
     position: absolute;
-    left: 42px;
+    left: 40px;
+    top: 440px;
     @include desktop {
-      left: 54px;
+      left: 55px;
+      top: 442px;
     }
-    top: 441px;
     opacity: 0;
   }
   &__checkbox-hide {
@@ -181,10 +186,15 @@
     }
   }
   &__checkbox-text {
-    margin-left: -5px;
-    @include desktop {
-      margin-left: 8px;
-    }
+   text-align: left;
+   margin-top: 40px;
+   margin-left: -60px;
+   font-size: 12px;
+   @include desktop {
+    font-size: 14px;
+    line-height: 1,71;
+    margin-top: 0;
+   margin-left: -40px;}
   }
   &__checkbox-item {
     color: $primaryColor;
@@ -192,10 +202,8 @@
   &__button {
     width: 200px;
     height: 50px;
-    margin: 30px 125px 40px;
-    @include desktop {
-      margin: 30px 164px 40px;
-    }
+    margin-top: 30px;
+   margin-bottom: 40px;
     background-color: $primaryColor;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;

@@ -4,6 +4,7 @@
     padding: 94px 0;
   }
   &__filters {
+    margin-bottom: 50px;
     row-gap: 8px;
     column-gap: 15px;
     @include tablet {
@@ -31,7 +32,6 @@
     cursor: pointer;
     border: none;
     padding: 6px 22px;
-    margin-bottom: 50px;
     transition-property: color, background-color, box-shadow, border-radius;
     transition-duration: $transitionDurationDefault;
     transition-timing-function: $transitionTimingDefault;
@@ -49,6 +49,7 @@
     flex-wrap: wrap;
     row-gap: 30px;
     column-gap: 30px;
+    justify-content: flex-start;
     @include tablet {
     row-gap: 15px;
     column-gap: 15px;
