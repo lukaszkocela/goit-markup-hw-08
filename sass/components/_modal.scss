@@ -166,8 +166,11 @@
     border-radius: 2px;
     outline: $primaryColor;
     position: absolute;
-    left: 40px;
+    left: 50px;
     top: 440px;
+    @include tablet {
+      left: 40px;
+    }
     @include desktop {
       left: 55px;
       top: 442px;
@@ -188,8 +191,11 @@
   &__checkbox-text {
    text-align: left;
    margin-top: 40px;
-   margin-left: -60px;
+   margin-left: -80px;
+   font-size: 10px;
+   @include tablet {
    font-size: 12px;
+   margin-left: -60px;}
    @include desktop {
     font-size: 14px;
     line-height: 1,71;
