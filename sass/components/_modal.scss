@@ -151,19 +151,16 @@
   &__checkbox-to-check {
     fill: $secondaryColorBlack;
     position: absolute;
-    @media screen and (max-width: 479px) {
-      left:-1px
-    }
-    left:-5px;
-    top: -2px;
-    @include tablet {
-    left: 1px;
+    left: -2px;
     top: -1px;
-  }
-  @include desktop {
-    top:1px;
-  }
-    opacity: 1;
+    @include tablet {
+      left:-5px;
+      top:-1px;
+    }
+    @include desktop {
+      left:-10px;
+      top: 1px;
+    }
   }
   &__checkbox-after-check {
     fill: $tertiaryColorWhite;
@@ -172,23 +169,20 @@
     border-radius: 2px;
     outline: $primaryColor;
     position: absolute;
-    @media screen and (max-width: 479px) {
-      left:-1px
-    }
-    left:-5px;
-    top: -2px;
-    @include tablet {
-    left: 1px;
+    left: -2px;
     top: -1px;
-  }
-  @include desktop {
-    top:1px;
-  }
+    @include tablet {
+      left:-5px;
+      top:-1px;
+    }
+    @include desktop {
+      left:-10px;
+      top: 1px;
+    }
     opacity: 0;
   }
   &__checkbox-hide {
     display: inline-flex;
-    margin-left: 55px;
     opacity: 0;
     &:checked + .modal__checkbox-to-check {
       opacity: 0;
@@ -198,16 +192,12 @@
     }
   }
   &__checkbox-text {
-   text-align: left;
-   margin-left: -55px;
+   text-align: center;
    font-size: 12px;
-   @include tablet {
-   margin-left: -45px;}
    @include desktop {
     font-size: 14px;
     line-height: 1,71;
-    margin-top: 0;
-   margin-left: -40px;}
+    margin-top: 0;}
   }
   &__checkbox-item {
     color: $primaryColor;
