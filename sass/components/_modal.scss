@@ -172,8 +172,8 @@
     border-radius: 2px;
     outline: $primaryColor;
     position: absolute;
-    @media screen and (max-width: 340px) {
-      left:1px
+    @media screen and (max-width: 390px) {
+      left:-2px
     }
     left:-5px;
     top: -2px;
