@@ -100,7 +100,7 @@
   &__label-input {
     display: block;
     align-items: center;
-    width: calc(100vw - 110px);
+    width: 100%;
     max-width: 370px;
     @include desktop {
       max-width: 448px;
