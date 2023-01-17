@@ -17,6 +17,7 @@
 }
 
 .modal {
+  padding: 40px;
   position: absolute;
   text-align: center;
   top: 50%;
@@ -77,7 +78,6 @@
     display: block;
     text-align: start;
     font-size: 12px;
-    margin-left: 40px;
     color: $secondaryColorSilver;
     font-weight: 400;
     line-height: 1.17;
@@ -92,7 +92,7 @@
   &__label-icon {
     position: absolute;
     top: 14px;
-    left: 53px;
+    left: 13px;
     transition-property: fill;
     transition-duration: $transitionDurationDefault;
     transition-timing-function: $transitionTimingDefault;
@@ -108,7 +108,6 @@
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    margin-left: 40px;
     margin-top: 4px;
     padding: 12px 42px;
     color: $secondaryColorBlack;
@@ -214,10 +213,9 @@
     color: $primaryColor;
   }
   &__button {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: 50px;
-    margin-top: 30px;
-   margin-bottom: 40px;
     background-color: $primaryColor;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -227,7 +225,6 @@
     font-size: 16px;
     cursor: pointer;
     border: none;
-    display: block;
-    margin: 30px auto 40px auto;
+    margin-top: 30px;
   }
 }
