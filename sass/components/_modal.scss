@@ -151,7 +151,7 @@
   &__checkbox-to-check {
     fill: $secondaryColorBlack;
     position: absolute;
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 460px) {
       left:-2px
     }
     left:-5px;
@@ -172,7 +172,7 @@
     border-radius: 2px;
     outline: $primaryColor;
     position: absolute;
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 460px) {
       left:-2px
     }
     left:-5px;
